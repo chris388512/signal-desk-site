@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signal Desk — The companies staffing up for what you sell. Every Monday.</title>
+<script>
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.classList.add('dark');
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11/dist/index.global.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 antialiased">
+
+<div class="banner">DRAFT — not published. Contains placeholders that must be filled before going live.</div>
+
+<!-- HERO -->
+<section class="wrap pt-12 pb-14">
+  <p class="eyebrow">Signal Desk</p>
+  <h1 class="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05] max-w-4xl">
+    The companies staffing up<br>for what you sell.<br>Every Monday, in one sheet.
+  </h1>
+  <p class="mt-6 text-lg text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed">
+    When a company posts eight roles naming a specific tool, they just committed budget to it.
+    Signal Desk reads public job postings every week, finds the companies matching the exact ICP you
+    define, adds verified contacts and a link to the posting itself, and emails you the sheet.
+    <strong class="text-gray-900 dark:text-gray-100">No dashboard. No login. No tool to learn.</strong>
+  </p>
+  <div class="mt-8 flex flex-col sm:flex-row gap-3 sm:items-center">
+    <a href="#pricing" class="btn-primary">Start for $149/month →</a>
+    <a href="#sheet" class="btn-ghost">See what's actually in the sheet ↓</a>
+  </div>
+  <p class="mt-4 text-sm text-gray-500 dark:text-gray-500">
+    Month-to-month. Self-serve checkout. First sheet within 5 business days of your intake form.
+  </p>
+</section>
+
+<!-- PROBLEM -->
+<section class="wrap section border-t">
+  <h2 class="h2">You already know outbound works. You just can't stomach what it costs to feed it.</h2>
+  <p class="lead">Right now you have three options, and all three are bad:</p>
+  <div class="card-grid mt-8">
+    <div class="card">
+      <p class="card-kicker">Option 1</p>
+      <h3 class="card-title">Run the tools yourself</h3>
+      <p class="card-body">Apollo is $49–$119 per seat/month, and the top tier has a 3-seat minimum — so you're at
+      <strong>$357/month</strong> before you've built a single search. Clay runs $167–$495/month with the steepest
+      learning curve in the category. Both charge you money <em>and</em> the hours to operate them.</p>
+    </div>
+    <div class="card">
+      <p class="card-kicker">Option 2</p>
+      <h3 class="card-title">Hire the agency</h3>
+      <p class="card-body">CIENCE is the cheapest done-for-you shop that publishes pricing:
+      <strong>$7,499 for month one, then $2,499/month</strong>. A real answer for a funded sales org.
+      Not an answer for a solo consultant or a five-person agency.</p>
+    </div>
+    <div class="card">
+      <p class="card-kicker">Option 3</p>
+      <h3 class="card-title">Buy a cheap list</h3>
+      <p class="card-body">There's a thread on r/b2bmarketing where a team describes paying roughly $350/month for
+      lists they called <strong>"80% garbage" with a 12% bounce rate</strong>. Cheap lists are cheap because
+      nobody looked at them.</p>
+    </div>
+  </div>
+  <div class="pullquote">
+    A list of companies that <em>match your ICP</em> is not the same as a list of companies that are
+    <em>ready to buy right now</em>. Firmographics tell you who could buy. Signals tell you who just
+    changed something. You want the second list.
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="wrap section border-t">
+  <h2 class="h2">Three steps. You do one of them, once.</h2>
+  <ol class="steps">
+    <li>
+      <span class="step-num">1</span>
+      <div>
+        <h3 class="card-title">You define the ICP. <span class="muted">15 minutes, one time.</span></h3>
+        <p class="card-body">Industry, headcount range, geography, the job titles you sell to, the technologies or
+        triggers that matter, and anything you want excluded. Plain English is fine — "US B2B SaaS, 20–200 people,
+        that just hired a first RevOps person" is a valid answer.</p>
+      </div>
+    </li>
+    <li>
+      <span class="step-num">2</span>
+      <div>
+        <h3 class="card-title">We read public job postings against that ICP, every week.</h3>
+        <ul class="bullets">
+          <li><strong>Hiring for a specific technology</strong> — multiple open roles naming a tool you sell around. Budget is already committed.</li>
+          <li><strong>Tech-stack added</strong> — a platform showing up in their postings that wasn't there last week</li>
+          <li><strong>Tech-stack dropped</strong> — a tool that disappeared. Often the strongest trigger: someone just churned off a vendor and has a hole.</li>
+        </ul>
+        <p class="card-body mt-3">Sourced from the companies' own public job boards. Every row links to the
+        actual posting, so you can verify any signal in one click.</p>
+      </div>
+    </li>
+    <li>
+      <span class="step-num">3</span>
+      <div>
+        <h3 class="card-title">The sheet lands in your inbox Monday morning.</h3>
+        <p class="card-body">One Google Sheet link, per-company rows, with the signal, the evidence, and verified
+        contacts. Copy it, paste it into whatever you send from, go to work. Nothing to log into, no seat to assign.</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- SHEET -->
+<section id="sheet" class="wrap section border-t">
+  <h2 class="h2">The sheet. Column by column.</h2>
+  <p class="lead">Every Monday you get one Google Sheet. Here's what's in it, so you know exactly what you're paying for.</p>
+  <div class="table-wrapper mt-8">
+    <table class="tbl">
+      <thead><tr><th>Column</th><th>What's in it</th></tr></thead>
+      <tbody id="col-table"></tbody>
+    </table>
+  </div>
+  <div class="card-grid mt-8">
+    <div class="card accent">
+      <h3 class="card-title">We ship "Not Found" rows honestly</h3>
+      <p class="card-body">Rather than guessing an email pattern to make the count look better. A padded sheet is how
+      you end up with a 12% bounce rate and a burned sending domain.</p>
+    </div>
+    <div class="card accent">
+      <h3 class="card-title">Every row has a source link</h3>
+      <p class="card-body">If you don't believe a signal, click it. The whole product falls apart if you can't check
+      our work, so we make checking it trivial.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="wrap section border-t">
+  <h2 class="h2">Where Signal Desk sits</h2>
+
+  <h3 class="h3">vs. running the tools yourself</h3>
+  <div class="table-wrapper"><table class="tbl" id="cmp-tools"></table></div>
+  <p class="note">Apollo and Clay are genuinely powerful — that's the point. They're platforms, and platforms need an
+  operator. If you have someone in-house who enjoys building enrichment waterfalls, use Clay. It'll do more than we do.
+  If nobody at your company wants that job, that's us.</p>
+
+  <h3 class="h3">vs. single-signal list services</h3>
+  <div class="table-wrapper"><table class="tbl" id="cmp-lists"></table></div>
+  <p class="note">Straight answer: we do <strong>not</strong> track funding rounds or executive job changes. If those
+  are your triggers, FundedList is a clean, honest product at the same price and you should just buy it. We track one
+  thing nobody else sells &mdash; what a company is actively hiring for &mdash; and we do it against any ICP you define.</p>
+
+  <h3 class="h3">vs. done-for-you agencies</h3>
+  <div class="table-wrapper"><table class="tbl" id="cmp-agency"></table></div>
+  <p class="note">To be straight with you: CIENCE does much more than we do. They run the outbound. We hand you the
+  list and you run it. We're the list layer, priced like a list layer.</p>
+</section>
+
+<!-- FOUNDING / PROOF PLACEHOLDER -->
+<section class="wrap section border-t">
+  <div class="founding">
+    <h2 class="h2 !mt-0">We launched this week. You'd be one of the first.</h2>
+    <p class="card-body">We don't have testimonials yet and we're not going to fake any. What we can offer instead:
+    the founding rate is locked at <strong>$149/month for as long as you stay subscribed</strong>, you get direct email
+    access to the person building your lists, and if the first sheet isn't usable, tell us and we'll fix it or refund
+    that month. That's the trade.</p>
+    <p class="placeholder">[PROOF PLACEHOLDER — testimonials go here only when real, named, and permitted in writing.
+    No invented quotes, no composites, no logos without permission, no reply-rate or ROI figures unless the customer
+    states them.]</p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="wrap section border-t">
+  <h2 class="h2">$149 per month. One plan.</h2>
+  <div class="price-card">
+    <div class="price-head">
+      <span class="price">$149</span><span class="per">/month</span>
+    </div>
+    <ul class="ticks" id="incl"></ul>
+    <a href="#" class="btn-primary w-full text-center mt-6" data-sample href="mailto:chris388512@gmail.com?subject=Signal%20Desk%20—%20free%20sample%20sheet">Get a free sample sheet →</a>
+    <p class="note !mt-3">Self-serve checkout. Intake form immediately after payment. First sheet within 5 business days.</p>
+    <div class="excl">
+      <p class="card-kicker">What's not included, so there are no surprises</p>
+      <p class="card-body">We don't send the emails for you, we don't book meetings, we don't write your sequences,
+      and there's no dashboard or API. If you need those, you need an agency or a platform — and we'll tell you that
+      instead of selling you this.</p>
+    </div>
+  </div>
+  <p class="note mt-6">Not ready? Get your first sheet free — <strong>card required, $149 charged on a date shown
+  before you enter it, one-click cancel</strong>. Card-required trials convert ~30% vs 6–7% without, and every trial
+  sheet is a full production run for us. Two reminder emails before any charge. Cancel and you keep the sheet.</p>
+</section>
+
+<!-- FAQ -->
+<section class="wrap section border-t">
+  <h2 class="h2">FAQ</h2>
+  <div id="faq" class="mt-6"></div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="wrap section border-t pb-20">
+  <h2 class="h2">Next Monday, either you're staring at a blank prospecting doc or you're opening a sheet.</h2>
+  <p class="lead">$149/month. Month-to-month. Cancel from any email. If the first sheet isn't usable, we rebuild it
+  or refund the month.</p>
+  <a href="mailto:chris388512@gmail.com?subject=Signal%20Desk%20—%20free%20sample%20sheet" class="btn-primary mt-6 inline-block" data-sample>Get a free sample sheet →</a>
+  <footer class="foot">
+    Signal Desk · Davis Enterprises ·
+    <a href="mailto:chris388512@gmail.com">chris388512@gmail.com</a><br>
+    <a href="privacy.html">Privacy notice</a> · <a href="terms.html">Terms</a> · Unsubscribe from any email in one click.
+    <!-- REQUIRED BEFORE FIRST COMMERCIAL EMAIL: physical mailing address (CAN-SPAM). Not published yet - owner has not supplied one. -->
+  </footer>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
