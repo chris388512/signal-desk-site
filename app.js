@@ -114,13 +114,4 @@ document.addEventListener("DOMContentLoaded", () => {
   if (faq) faq.innerHTML = FAQ.map(([q, a]) =>
     `<details class="faq-item"><summary>${q}</summary><p>${a}</p></details>`).join("");
 
-  // No payment processor connected yet - the CTA collects sample requests by email.
-  // When Stripe is live: replace the mailto links with the Stripe payment link.
-  document.querySelectorAll("[data-checkout]").forEach(b => {
-    b.addEventListener("click", e => {
-      e.preventDefault();
-      window.location.href = "mailto:chris388512@gmail.com" +
-        "?subject=Signal%20Desk%20\u2014%20free%20sample%20sheet";
-    });
-  });
 });
